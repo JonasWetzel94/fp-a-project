@@ -132,20 +132,7 @@ NetIncome_Yt = PBT_Yt - Tax_Yt
 - **Controls**: conditional formatting for negative growth (to trigger stream discontinuation), margin checks, and a **Payroll tie-out** line in the P&L.  
 - **Design**: compact dashboards mirroring management reporting (Actuals vs. Budget, growth %, margins).  
 
-**Example formulas (worksheet style)**
-```excel
-'Revenue total from COGS and fixed margin
-= COGS_Total_Y4 / (1 - $Assumptions.GPM)
 
-'COGS Other growth
-= COGS_Other_Y3 * (1 + $Assumptions.COGS_Other_Growth)
-
-'T&D variable portion
-= Employee_Count_Y4 * $Assumptions.TD_Allowance_Per_Emp
-
-'Interest schedule
-= Interest_Y3 - $Assumptions.Annual_Interest_Decrease
-```
 ## What I Learned
 
 - How to anchor a budget on a fixed gross margin and back-solve revenue from cost structures.
